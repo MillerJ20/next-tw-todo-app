@@ -1,10 +1,10 @@
 import { DeleteButton } from "./DeleteButton"
 import { EditButton } from "./EditButton"
 
-export const ListItem = () => {
+export const ListItem = ({ text }) => {
   return (
-    <div>
-      <div>Item Text</div>
+    <div className="flex flex-row top-0 left-0 w-fit my-auto">
+      <div className="my-auto mx-2">{text}</div>
       <DeleteButton />
       <EditButton />    
     </div>

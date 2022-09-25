@@ -1,5 +1,9 @@
+import { MdModeEditOutline } from 'react-icons/md'
+
 export const EditButton = () => {
   return (
-    <div>EditButton</div>
+    <button className='button-icon-edit'>
+      {<MdModeEditOutline />}
+    </button>
   )
 }

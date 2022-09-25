@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'apple': 'Inter, -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif'
+    }
   },
   plugins: [],
 }
