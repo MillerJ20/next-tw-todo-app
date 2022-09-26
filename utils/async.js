@@ -31,10 +31,13 @@ export const addTask = async (uuid, taskText) => {
 
 export const deleteTask = async (taskId) => {
   const { collectionRef } = await getTasks();
-
-  await collectionRef.doc(taskId).delete();
-
-  return 'Deleted?'
+  
+  try {
+    await collectionRef.doc(taskId).delete();
+    return 
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export const editTask = async (taskId, updatedString) => {
@@ -52,4 +55,4 @@ export const editTask = async (taskId, updatedString) => {
   }
 }
 
-console.log('Edited task: ', await editTask('048c91e3-a7fd-45d6-bd7e-1d1173df3ca8', 'Get updated kid'))
+// console.log('Edited task: ', await editTask('048c91e3-a7fd-45d6-bd7e-1d1173df3ca8', 'Get updated kid'))

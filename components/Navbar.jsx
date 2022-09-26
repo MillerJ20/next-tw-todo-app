@@ -8,7 +8,7 @@ export const Navbar = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    addTask(uuidv4(), 'handleClick test 2')
+    addTask(uuidv4(), 'handleClick test to be deleted')
   }
 
   return (
