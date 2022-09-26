@@ -3,24 +3,23 @@ import { Spacetime } from '@spacetimexyz/client'
 const db = new Spacetime();
 
 const metaData = {
-  id: 'miller/todos',
+  id: 'miller/tasks',
   schema: {
     type: 'object',
     properties: {
-      listId: {
+      taskId: {
         type: 'string'
       },
-      listName: {
+      taskText: {
         type: 'string'
       },
-      listItems: {
-        type: 'string',
-      }
     }
   },
   indexes: [{
-    fields: [{ field: 'listId' }]
+    fields: [{ field: 'taskId' }]
   }]
 }
 
 const createdCollection = await db.createCollection(metaData);
+
+console.log('Results of the collection being created: ', createdCollection)
