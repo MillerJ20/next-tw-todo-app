@@ -13,7 +13,7 @@ export const DeleteButton = ({ id }) => {
       className="relative flex items-center justify-center 
     h-12 w-12 mt-2 mb-2 mx-auto  
     bg-red-200 hover:bg-red-400
-    text-gray-500 hover:text-white
+    text-red-200-contrast hover:text-black
     hover:rounded-xl rounded-3xl
     transition-all duration-200 ease-linear
     cursor-pointer shadow-lg basis-1/7 group"

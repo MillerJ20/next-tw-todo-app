@@ -11,8 +11,8 @@ export const EditButton = ({ id, setInputFocus }) => {
     <button
       className="grow-0 relative flex items-center justify-center 
     h-12 w-12 mt-2 mb-2  
-    bg-blue-200 hover:bg-blue-500
-    text-gray-500 hover:text-white
+    bg-blue-300 hover:bg-blue-500
+    text-blue-300-contrast hover:text-blue-500-contrast
     hover:rounded-xl rounded-3xl
     transition-all duration-200 ease-linear
     cursor-pointer shadow-lg basis-1/7 group"

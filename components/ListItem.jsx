@@ -24,7 +24,7 @@ export const ListItem = ({ text, id }) => {
   };
 
   return (
-    <div className="flex flex-row w-fit border rounded-md mx-2 my-2 bg-gray-200 pr-2 shadow-lg">
+    <div className="flex flex-row w-fit border rounded-md mx-2 my-2 bg-gray-100 pr-2 shadow-lg">
       <form className="my-auto mx-2 overflow-auto" onSubmit={handleSubmit}>
         <input
           type="text"

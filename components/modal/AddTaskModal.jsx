@@ -22,7 +22,7 @@ export const AddTaskModal = ({ setShow }) => {
   };
 
   return (
-    <div className="flex flex-row w-fit border rounded-md bg-slate-200 shadow-lg py-2 px-2">
+    <div className="flex flex-row w-fit border rounded-md bg-white shadow-lg py-2 px-2">
       <div className="my-auto px-2">Enter new task text: </div>
       <form className="my-auto" onSubmit={handleSubmit}>
         <input
@@ -34,16 +34,16 @@ export const AddTaskModal = ({ setShow }) => {
         />
       </form>
       <button
-        className="my-auto px-2 py-2 mx-2 bg-red-200 hover:bg-red-500
-      text-black hover:text-white transition-all duration-200 ease-linear
+        className="my-auto px-2 py-2 mx-2 bg-red-200 hover:bg-red-400
+      text-red-200-contrast hover:text-red-500-contrast transition-all duration-200 ease-linear
       cursor-pointer shadow-lg rounded-md hove:rounded-xl"
         onClick={handleClick}
       >
         CLOSE
       </button>
       <button
-        className="my-auto px-2 py-2 mr-2 bg-green-200 hover:bg-green-500
-      text-black hover:text-white transition-all duration-200 ease-linear
+        className="my-auto px-2 py-2 mr-2 bg-green-200 hover:bg-green-400
+      text-green-200-contrast hover:text-green-500-contrast transition-all duration-200 ease-linear
       cursor-pointer shadow-lg rounded-md hove:rounded-xl"
         onClick={handleSubmit}
       >

@@ -1,25 +1,25 @@
-import { Spacetime } from '@spacetimexyz/client'
+import { Spacetime } from "@spacetimexyz/client";
 
 const db = new Spacetime();
 
 const metaData = {
-  id: 'miller/tasks',
+  id: "miller/tasks",
   schema: {
-    type: 'object',
+    type: "object",
     properties: {
       taskId: {
-        type: 'string'
+        type: "string",
       },
       taskText: {
-        type: 'string'
+        type: "string",
       },
-    }
+    },
   },
-  indexes: [{
-    fields: [{ field: 'taskId' }]
-  }]
-}
+  indexes: [
+    {
+      fields: [{ field: "taskId" }],
+    },
+  ],
+};
 
 const createdCollection = await db.createCollection(metaData);
-
-console.log('Results of the collection being created: ', createdCollection)
