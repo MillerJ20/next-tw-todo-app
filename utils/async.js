@@ -1,16 +1,15 @@
 import { Spacetime } from "@spacetimexyz/client";
 
 export const getTasks = async () => {
-  const spacetime = new Spacetime();
+    const spacetime = new Spacetime();
+    const collectionRef = spacetime.collection('miller/tasks');
+   
+    const docs = await collectionRef.get();
   
-  const collectionRef = spacetime.collection('miller/tasks');
- 
-  const docs = await collectionRef.get();
-
-  return {
-    docs,
-    collectionRef
-  };
+    return {
+      docs,
+      collectionRef
+    }
 }
 
 
@@ -48,10 +47,11 @@ export const editTask = async (taskId, updatedString) => {
       taskId,
       taskText: updatedString
     })
+    console.log('Updated doc: ', updatedDoc)
     return updatedDoc;
   } 
   catch (error) {
-    console.error(error)
+    console.error('Error in edit tasks: ',error)
   }
 }
 
